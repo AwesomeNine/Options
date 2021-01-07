@@ -7,7 +7,7 @@
 [![License](https://poser.pugx.org/awesome9/options/license)](https://packagist.org/packages/awesome9/options)
 
 <p align="center">
-	<img src="https://img.icons8.com/nolan/256/options.png"/>
+	<img src="https://img.icons8.com/nolan/256/services.png"/>
 </p>
 
 ## 📃 About Options
