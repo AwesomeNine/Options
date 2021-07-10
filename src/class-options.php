@@ -19,7 +19,7 @@ class Options {
 	 *
 	 * @var array
 	 */
-	private $options = array();
+	private $options = [];
 
 	/**
 	 * Magic function override.
@@ -63,7 +63,7 @@ class Options {
 	 * @return Options
 	 */
 	public function hooks() {
-		add_action( 'init', array( $this, 'is_sitepress_active' ) );
+		add_action( 'init', [ $this, 'is_sitepress_active' ] );
 
 		return $this;
 	}
@@ -92,7 +92,7 @@ class Options {
 	 *
 	 * @return Options
 	 */
-	public function register( $name, $option_key, $defaults = array() ) {
+	public function register( $name, $option_key, $defaults = [] ) {
 		// Early Bail!!
 		if ( empty( $name ) || empty( $option_key ) || isset( $this->options[ $name ] ) ) {
 			return $this;

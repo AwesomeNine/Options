@@ -40,7 +40,7 @@ class Option {
 	 *
 	 * @var array
 	 */
-	protected $defaults = array();
+	protected $defaults = [];
 
 	/**
 	 * Initiate option object
@@ -48,7 +48,7 @@ class Option {
 	 * @param string $option_key The option key to save into wp_options.
 	 * @param array  $defaults   The defaults values.
 	 */
-	public function __construct( $option_key, $defaults = array() ) {
+	public function __construct( $option_key, $defaults = [] ) {
 		$this->key      = $option_key;
 		$this->defaults = $defaults;
 	}
@@ -75,7 +75,7 @@ class Option {
 	 */
 	public function delete_option() {
 		$deleted       = $this->key ? delete_option( $this->key ) : true;
-		$this->options = $deleted ? array() : $this->options;
+		$this->options = $deleted ? [] : $this->options;
 
 		return $this->options;
 	}
@@ -187,7 +187,7 @@ class Option {
 			return $this->options;
 		}
 
-		$this->raw_options = get_option( $this->key, array() );
+		$this->raw_options = get_option( $this->key, [] );
 		$this->options     = $this->normalize_it( $this->raw_options );
 
 		return $this->options;
